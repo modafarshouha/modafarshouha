@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Modafar Al-Shouha</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Honeypot field - hidden from humans, visible to bots */
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+            opacity: 0;
+            height: 0;
+            width: 0;
+            z-index: -1;
+        }
+        .email-validation {
+            font-size: 0.85rem;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .email-validation.valid {
+            color: #2e7d32;
+        }
+        .email-validation.invalid {
+            color: #c62828;
+        }
+        .email-validation.checking {
+            color: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">M.A</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#thesis">Thesis</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="section contact-form-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <h1 class="contact-form-title">
+                    <span class="title-icon"><i class="fas fa-paper-plane"></i></span>
+                    Send Me a Message
+                </h1>
+                <p class="contact-form-intro">
+                    Have a question, collaboration idea, or just want to say hello? 
+                    Fill out the form below and I'll get back to you as soon as possible.
+                </p>
+                
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xkoqvqng" method="POST">
+                    <!-- Formspree settings -->
+                    <input type="hidden" name="_replyto" value="">
+                    <input type="hidden" name="_next" value="">
+                    <!-- Honeypot field for bot protection - bots fill this, humans don't see it -->
+                    <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+                    
+                    <!-- Formspree honeypot -->
+                    <input type="hidden" name="_subject" value="New message from website">
+                    
+                    <div class="form-group">
+                        <label for="name">
+                            <i class="fas fa-user"></i> Your Name <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="John Doe"
+                            minlength="2"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            <i class="fas fa-envelope"></i> Your Email <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your.email@example.com"
+                            required
+                        >
+                        <div id="email-status" class="email-validation"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">
+                            <i class="fas fa-tag"></i> Subject <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            placeholder="What is this about?"
+                            minlength="3"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment-alt"></i> Message <span class="required">*</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            placeholder="Write your message here..."
+                            minlength="10"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Anti-bot: Simple math question -->
+                    <div class="form-group">
+                        <label for="captcha">
+                            <i class="fas fa-robot"></i> Anti-spam: What is <span id="math-question"></span>? <span class="required">*</span>
+                        </label>
+                        <input 
+                            type="number" 
+                            id="captcha" 
+                            name="captcha" 
+                            placeholder="Enter the answer"
+                            required
+                        >
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn" id="submit-btn" disabled>
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+                
+                <div id="form-status" class="form-status"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Handala Icon - Bottom Right -->
+    <div class="handala-fixed" title="Handala - Symbol of Palestinian identity">
+        <img src="assets/images/handala.png" alt="Handala">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Modafar Al-Shouha. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://scholar.google.com/citations?user=A75rwHIAAAAJ&hl=de&oi=ao" target="_blank" title="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/modafaralshouha/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/modafarshouha" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://orcid.org/0000-0003-2051-4036" target="_blank" title="ORCID">
+                        <i class="fab fa-orcid"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // ===== Anti-bot: Math CAPTCHA =====
+        let correctAnswer = 0;
+        const mathQuestion = document.getElementById('math-question');
+        const captchaInput = document.getElementById('captcha');
+        const submitBtn = document.getElementById('submit-btn');
+
+        function generateMathQuestion() {
+            const num1 = Math.floor(Math.random() * 10) + 1;
+            const num2 = Math.floor(Math.random() * 10) + 1;
+            correctAnswer = num1 + num2;
+            mathQuestion.textContent = `${num1} + ${num2}`;
+        }
+        generateMathQuestion();
+
+        // ===== Email Validation =====
+        const emailInput = document.getElementById('email');
+        const emailStatus = document.getElementById('email-status');
+        let emailValid = false;
+        let debounceTimer;
+
+        function validateEmailFormat(email) {
+            const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+            return regex.test(email);
+        }
+
+        function validateEmailDomain(email) {
+            const domain = email.split('@')[1];
+            if (!domain) return false;
+            
+            // Common valid email domains
+            const commonDomains = [
+                'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'live.com',
+                'icloud.com', 'me.com', 'mac.com', 'aol.com', 'protonmail.com',
+                'mail.com', 'zoho.com', 'yandex.com', 'gmx.com', 'gmx.net',
+                'edu', 'ac.uk', 'edu.au', 'ac.jp', 'edu.cn'
+            ];
+            
+            // Check if it's a common domain or has valid TLD
+            const hasValidTLD = /\.[a-z]{2,}$/i.test(domain);
+            const isCommonDomain = commonDomains.some(d => domain.endsWith(d));
+            const isEduDomain = /\.(edu|ac\.|university|uni\.)/.test(domain);
+            
+            return hasValidTLD && (isCommonDomain || isEduDomain || domain.split('.').length >= 2);
+        }
+
+        async function checkEmailExists(email) {
+            emailStatus.className = 'email-validation checking';
+            emailStatus.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Validating email...';
+            
+            // Basic format check
+            if (!validateEmailFormat(email)) {
+                emailStatus.className = 'email-validation invalid';
+                emailStatus.innerHTML = '<i class="fas fa-times-circle"></i> Invalid email format';
+                emailValid = false;
+                updateSubmitButton();
+                return;
+            }
+
+            // Domain validation
+            if (!validateEmailDomain(email)) {
+                emailStatus.className = 'email-validation invalid';
+                emailStatus.innerHTML = '<i class="fas fa-times-circle"></i> Please use a valid email domain';
+                emailValid = false;
+                updateSubmitButton();
+                return;
+            }
+
+            // Check for disposable/temporary email domains
+            const disposableDomains = [
+                'tempmail.com', 'throwaway.com', 'guerrillamail.com', 'mailinator.com',
+                '10minutemail.com', 'temp-mail.org', 'fakeinbox.com', 'trashmail.com',
+                'getnada.com', 'mohmal.com', 'tempail.com', 'dispostable.com'
+            ];
+            
+            const domain = email.split('@')[1].toLowerCase();
+            if (disposableDomains.some(d => domain.includes(d))) {
+                emailStatus.className = 'email-validation invalid';
+                emailStatus.innerHTML = '<i class="fas fa-times-circle"></i> Temporary emails are not allowed';
+                emailValid = false;
+                updateSubmitButton();
+                return;
+            }
+
+            // Email looks valid
+            emailStatus.className = 'email-validation valid';
+            emailStatus.innerHTML = '<i class="fas fa-check-circle"></i> Email looks valid';
+            emailValid = true;
+            updateSubmitButton();
+        }
+
+        emailInput.addEventListener('input', (e) => {
+            clearTimeout(debounceTimer);
+            const email = e.target.value.trim();
+            
+            if (email.length < 5) {
+                emailStatus.innerHTML = '';
+                emailValid = false;
+                updateSubmitButton();
+                return;
+            }
+            
+            debounceTimer = setTimeout(() => {
+                checkEmailExists(email);
+            }, 500);
+        });
+
+        // ===== Update Submit Button State =====
+        function updateSubmitButton() {
+            const captchaCorrect = parseInt(captchaInput.value) === correctAnswer;
+            submitBtn.disabled = !(emailValid && captchaCorrect);
+        }
+
+        captchaInput.addEventListener('input', updateSubmitButton);
+
+        // ===== Form Submission =====
+        const form = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Check honeypot (bot protection)
+            const honeypot = form.querySelector('input[name="_gotcha"]');
+            if (honeypot && honeypot.value) {
+                formStatus.innerHTML = '<div class="status-error"><i class="fas fa-robot"></i> Bot detected. Submission blocked.</div>';
+                return;
+            }
+
+            // Verify CAPTCHA
+            if (parseInt(captchaInput.value) !== correctAnswer) {
+                formStatus.innerHTML = '<div class="status-error"><i class="fas fa-times-circle"></i> Incorrect answer. Please solve the math question.</div>';
+                generateMathQuestion();
+                captchaInput.value = '';
+                return;
+            }
+
+            // Verify email
+            if (!emailValid) {
+                formStatus.innerHTML = '<div class="status-error"><i class="fas fa-times-circle"></i> Please enter a valid email address.</div>';
+                return;
+            }
+            
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            try {
+                const formData = new FormData(form);
+                // Remove captcha from submission
+                formData.delete('captcha');
+                
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.innerHTML = '<div class="status-success"><i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. I\'ll get back to you soon.</div>';
+                    form.reset();
+                    emailStatus.innerHTML = '';
+                    emailValid = false;
+                    generateMathQuestion();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formStatus.innerHTML = '<div class="status-error"><i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or contact me through LinkedIn.</div>';
+            }
+
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>
