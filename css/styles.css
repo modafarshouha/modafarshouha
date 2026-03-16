@@ -930,7 +930,7 @@ img {
     opacity: 0.6;
     transition: var(--transition-normal);
     z-index: 100;
-    cursor: default;
+    cursor: pointer;
 }
 
 .handala-fixed:hover {
