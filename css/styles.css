@@ -1144,6 +1144,7 @@ img {
 .publication-item:nth-child(3) { transition-delay: 0.3s; }
 .publication-item:nth-child(4) { transition-delay: 0.4s; }
 .publication-item:nth-child(5) { transition-delay: 0.5s; }
+.publication-item:nth-child(6) { transition-delay: 0.6s; }
 
 .area-card:nth-child(1) { transition-delay: 0.1s; }
 .area-card:nth-child(2) { transition-delay: 0.2s; }
