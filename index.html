@@ -18,9 +18,9 @@
                 <li><a href="#research">Research</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#conferences">Conferences</a></li>
-                <li><a href="#membership">Membership</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#thesis">Thesis</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#membership">Membership</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle menu">
@@ -441,31 +441,42 @@
         </div>
     </section>
 
-    <!-- Membership Section -->
-    <section id="membership" class="section membership">
+    <!-- PhD Thesis Section -->
+    <section id="thesis" class="section thesis">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-icon"><i class="fas fa-id-card-clip"></i></span>
-                Membership
+                <span class="title-icon"><i class="fas fa-book"></i></span>
+                Ph.D. Thesis
             </h2>
-            <div class="publications-list memberships-list">
-                <div class="publication-item membership-item">
-                    <div class="pub-icon"><i class="fas fa-people-group"></i></div>
-                    <div class="pub-content">
-                        <h4>John von Neumann Computer Society (NJSZT)</h4>
-                        <p class="pub-venue">Hungarian professional society for computer science and digital culture</p>
-                        <a href="https://njszt.hu/en" target="_blank" rel="noopener noreferrer" class="pub-link">
-                            <i class="fas fa-external-link-alt"></i> njszt.hu
-                        </a>
+            <div class="thesis-content">
+                <div class="thesis-card">
+                    <h3>Advancing Robustness, Interpretability and Explainability for Classical and Large Artificial Intelligence Models</h3>
+                    <div class="thesis-abstract">
+                        <p>
+                            With the increasing integration of artificial intelligence (AI) into applications, the need for designing systems that are robust, interpretable, and explainable grows. Robustness concerns the ability of a system to function consistently under changing or imperfect conditions. Interpretability and explainability refer to the degree to which a system and its outcome are understood by users, allowing more trust and usability.
+                        </p>
+                        
+                        <h4><i class="fas fa-microchip"></i> Classical Neural Networks</h4>
+                        <p>
+                            While modern deep learning has shifted towards large models, many practical applications still depend on classical neural networks trained on relatively small, task-specific datasets. I proposed model-agnostic, post-hoc algorithms to extend image classifiers, allowing them to detect out-of-distribution (OOD) instances. Also, I presented S-GCD, a model-agnostic generalized category discovery algorithm that is effective on complex domain-specific data such as hyper-spectral imaging.
+                        </p>
+                        
+                        <h4><i class="fas fa-brain"></i> Large Models</h4>
+                        <p>
+                            Large models are becoming more popular in solving complex tasks. However, their black-box nature and wide exposure to data render the traditional definition of OOD insufficient. I extended the OOD definition by introducing novel non-semantic types that correspond to input difficulty. I proposed an approach to create benchmarks along with two datasets for intent classification and visual question answering. Furthermore, I introduced two algorithms (ReaL and ReDiT) to increase the trust of large models' prediction confidence scores after re-evaluation. I also explored the usage of large models in GCD and showed that a stand-alone model can achieve sufficient results in a zero-shot setting, proposing two continual learning methods to further improve performance.
+                        </p>
+                        
+                        <h4><i class="fas fa-search"></i> Interpretability & Explainability</h4>
+                        <p>
+                            Interpretability allows access to the model's inner workings, making it easier to analyze, adjust, and improve. I used it as a tool to identify strengths of existing story visualization solutions and fused them in a novel design (Mod-StoryGAN). I also discussed the definition of interpretability for KANs and critically evaluated their claims. Lastly, I proposed three XAI algorithms (PIC-XAI, iPIC-XAI, and PEX-VQA) that operate with multimodal systems and designed three automatic metrics to assess their performance.
+                        </p>
                     </div>
-                </div>
-                <div class="publication-item membership-item">
-                    <div class="pub-icon"><i class="fas fa-diagram-project"></i></div>
-                    <div class="pub-content">
-                        <h4>Project Management Institute (PMI)</h4>
-                        <p class="pub-venue">Global association for project management standards and certification</p>
-                        <a href="https://www.pmi.org" target="_blank" rel="noopener noreferrer" class="pub-link">
-                            <i class="fas fa-external-link-alt"></i> pmi.org
+                    <div class="thesis-links">
+                        <a href="https://doktori.hu/doktori-kepzes/szemelyek/41050/" target="_blank" class="thesis-link">
+                            <i class="fas fa-user-graduate"></i> Ph.D. Profile
+                        </a>
+                        <a href="https://www.tmit.bme.hu/node/3274?language=en" target="_blank" class="thesis-link">
+                            <i class="fas fa-university"></i> University Profile
                         </a>
                     </div>
                 </div>
@@ -555,42 +566,31 @@
         </div>
     </section>
 
-    <!-- PhD Thesis Section -->
-    <section id="thesis" class="section thesis">
+    <!-- Membership Section -->
+    <section id="membership" class="section membership">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-icon"><i class="fas fa-book"></i></span>
-                Ph.D. Thesis
+                <span class="title-icon"><i class="fas fa-id-card-clip"></i></span>
+                Membership
             </h2>
-            <div class="thesis-content">
-                <div class="thesis-card">
-                    <h3>Advancing Robustness, Interpretability and Explainability for Classical and Large Artificial Intelligence Models</h3>
-                    <div class="thesis-abstract">
-                        <p>
-                            With the increasing integration of artificial intelligence (AI) into applications, the need for designing systems that are robust, interpretable, and explainable grows. Robustness concerns the ability of a system to function consistently under changing or imperfect conditions. Interpretability and explainability refer to the degree to which a system and its outcome are understood by users, allowing more trust and usability.
-                        </p>
-                        
-                        <h4><i class="fas fa-microchip"></i> Classical Neural Networks</h4>
-                        <p>
-                            While modern deep learning has shifted towards large models, many practical applications still depend on classical neural networks trained on relatively small, task-specific datasets. I proposed model-agnostic, post-hoc algorithms to extend image classifiers, allowing them to detect out-of-distribution (OOD) instances. Also, I presented S-GCD, a model-agnostic generalized category discovery algorithm that is effective on complex domain-specific data such as hyper-spectral imaging.
-                        </p>
-                        
-                        <h4><i class="fas fa-brain"></i> Large Models</h4>
-                        <p>
-                            Large models are becoming more popular in solving complex tasks. However, their black-box nature and wide exposure to data render the traditional definition of OOD insufficient. I extended the OOD definition by introducing novel non-semantic types that correspond to input difficulty. I proposed an approach to create benchmarks along with two datasets for intent classification and visual question answering. Furthermore, I introduced two algorithms (ReaL and ReDiT) to increase the trust of large models' prediction confidence scores after re-evaluation. I also explored the usage of large models in GCD and showed that a stand-alone model can achieve sufficient results in a zero-shot setting, proposing two continual learning methods to further improve performance.
-                        </p>
-                        
-                        <h4><i class="fas fa-search"></i> Interpretability & Explainability</h4>
-                        <p>
-                            Interpretability allows access to the model's inner workings, making it easier to analyze, adjust, and improve. I used it as a tool to identify strengths of existing story visualization solutions and fused them in a novel design (Mod-StoryGAN). I also discussed the definition of interpretability for KANs and critically evaluated their claims. Lastly, I proposed three XAI algorithms (PIC-XAI, iPIC-XAI, and PEX-VQA) that operate with multimodal systems and designed three automatic metrics to assess their performance.
-                        </p>
-                    </div>
-                    <div class="thesis-links">
-                        <a href="https://doktori.hu/doktori-kepzes/szemelyek/41050/" target="_blank" class="thesis-link">
-                            <i class="fas fa-user-graduate"></i> Ph.D. Profile
+            <div class="publications-list memberships-list">
+                <div class="publication-item membership-item">
+                    <div class="pub-icon"><i class="fas fa-people-group"></i></div>
+                    <div class="pub-content">
+                        <h4>John von Neumann Computer Society (NJSZT)</h4>
+                        <p class="pub-venue">Hungarian professional society for computer science and digital culture</p>
+                        <a href="https://njszt.hu/en" target="_blank" rel="noopener noreferrer" class="pub-link">
+                            <i class="fas fa-external-link-alt"></i> njszt.hu
                         </a>
-                        <a href="https://www.tmit.bme.hu/node/3274?language=en" target="_blank" class="thesis-link">
-                            <i class="fas fa-university"></i> University Profile
+                    </div>
+                </div>
+                <div class="publication-item membership-item">
+                    <div class="pub-icon"><i class="fas fa-diagram-project"></i></div>
+                    <div class="pub-content">
+                        <h4>Project Management Institute (PMI)</h4>
+                        <p class="pub-venue">Global association for project management standards and certification</p>
+                        <a href="https://www.pmi.org" target="_blank" rel="noopener noreferrer" class="pub-link">
+                            <i class="fas fa-external-link-alt"></i> pmi.org
                         </a>
                     </div>
                 </div>
