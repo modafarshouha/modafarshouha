@@ -191,6 +191,13 @@ img {
     gap: 8px;
 }
 
+.hero-title-part {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+}
+
 .hero-title i {
     color: var(--primary-color);
 }
