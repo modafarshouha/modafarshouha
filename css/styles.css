@@ -669,6 +669,17 @@ img {
     margin-bottom: 6px;
 }
 
+.pub-content h4 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pub-content h4 a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 .pub-venue {
     font-size: 0.9rem;
     color: var(--text-light);
