@@ -1,11 +1,13 @@
-Year,Venue,Speaker/Author
-2026,"IEEE Central European AI Summit 2026 (AI Summit 2026), Kimpton BEM Budapest, Hungary, 19-21 March 2026, https://aisummit.uni-obuda.hu/","Participant"
-2026,"ICECET 2026: 6th International Conference on Electrical, Computer and Energy Technologies (hybrid), 6-9 July 2026, https://www.icecet.com/home","Reviewer"
-2025,"IEEE 29th International Conference on Intelligent Engineering Systems (INES)","Speaker/Author"
-2024,"IEEE 22nd World Symposium on Applied Machine Intelligence (SAMI)","Speaker/Author"
-2024,"International Conference on Intelligent Systems and Pattern Recognition","Speaker/Author"
-2024,"International Conference on Frontiers of Artificial Intelligence, Ethics … (as on Google Scholar)","Speaker/Author"
-2023,"IEEE 17th International Symposium on Applied Computational Intelligence (SACI)","Speaker/Author"
-2023,"IEEE 14th International Conference on Cognitive Infocommunications (CogInfoCom)","Speaker/Author"
-2022,"International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI)","Author"
-2022,"13th Conference of PhD Students in Computer Science (Szeged, Hungary)","Speaker/Author"
+Year,Conference,Venue,Role,Link
+2026,6th International Conference on Philosophy of Mind: Artificial Intelligence (6ICPH),"University of Porto · Porto, Portugal · 4–8 May 2026",Speaker / chair,https://ifilosofia.up.pt/activities/6-international-conference-philosophy-mind
+2026,IEEE Central European AI Summit 2026 (AI Summit),"Kimpton BEM · Budapest, Hungary · 19–21 March 2026",Participant,https://aisummit.uni-obuda.hu/
+2026,"6th International Conference on Electrical, Computer and Energy Technologies (ICECET)","H10 Roma Città · Rome, Italy · 6–9 July 2026",Reviewer,https://www.icecet.com/home
+2025,IEEE 29th International Conference on Intelligent Engineering Systems (INES),"Saracen Sands Hotel · Palermo, Italy · 11–13 June 2025",Speaker / author,http://www.ines-conf.org/ines-conf/2025index.html
+2025,CRAFT Conference 2025,"Hungarian Railway Museum · Budapest, Hungary · 29-30 May 2025",Participant,https://craft-conf.com/2025
+2024,IEEE 22nd World Symposium on Applied Machine Intelligence (SAMI),"Kontakt Wellness Hotel · Stará Lesná, Slovakia · 25–27 January 2024",Speaker / author,https://conf.uni-obuda.hu/sami2024/
+2024,4th International Conference on Intelligent Systems and Pattern Recognition (ISPR),"Ramada Hotel · Istanbul, Turkey · 26–28 June 2024",Speaker / author,https://ispr2024.sciencesconf.org/?lang=en
+2024,"2nd International Conference on Frontiers of Artificial Intelligence, Ethics, and Multidisciplinary Applications (FAIEMA)","National and Kapodistrian University of Athens · Athens, Greece · 1–2 October 2024",Speaker / author,https://www.faiema.org/2024
+2023,IEEE 17th International Symposium on Applied Computational Intelligence (SACI),"Politehnica University of Timisoara · Timisoara, Romania · 23–26 May 2023",Speaker / author,https://conf.uni-obuda.hu/saci2023/index.html
+2023,IEEE 14th International Conference on Cognitive Infocommunications (CogInfoCom),"Corvinus University of Budapest · Budapest, Hungary · 22–23 September 2023",Speaker / author,https://scitope.com/coginfocom23/
+2022,3rd International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI),"Université Paris Cité · Paris, France · 1–3 June 2022",Author,https://icprai2022.sciencesconf.org/
+2022,13th Conference of PhD Students in Computer Science (CSCS),"University of Szeged · Szeged, Hungary · 29 June – 1 July 2022",Speaker / author,https://www.inf.u-szeged.hu/~cscs/cscs2022/thirdann.php
