@@ -566,12 +566,12 @@ img {
 .areas-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 16px;
 }
 
 .area-card {
     background: var(--bg-card);
-    padding: 30px 24px;
+    padding: 20px 18px;
     border-radius: var(--border-radius);
     text-align: center;
     border: 1px solid var(--border-color);
@@ -598,7 +598,7 @@ img {
 .area-card i {
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     flex-shrink: 0;
 }
 
@@ -627,11 +627,11 @@ img {
 
 .publication-item {
     display: flex;
-    gap: 20px;
-    padding: 24px;
+    gap: 14px;
+    padding: 16px 18px;
     background: var(--bg-card);
     border-radius: var(--border-radius);
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border: 1px solid var(--border-color);
     transition: var(--transition-normal);
     opacity: 0;
@@ -649,15 +649,15 @@ img {
 }
 
 .pub-icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--bg-secondary);
     border-radius: var(--border-radius);
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     flex-shrink: 0;
 }
 
@@ -704,8 +704,29 @@ img {
     gap: 16px;
 }
 
-.publications-cta {
+.publications-cta,
+.conferences-cta {
     text-align: center;
+}
+
+/* Collapsible conference items */
+.conf-hidden {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border: none !important;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+.conf-hidden.conf-visible {
+    max-height: 200px;
+    opacity: 1;
+    margin-bottom: 10px !important;
+    padding: 16px 18px !important;
+    border: 1px solid var(--border-color) !important;
 }
 
 /* ===== Experience Section ===== */
@@ -762,7 +783,7 @@ img {
 
 .timeline-content {
     background: var(--bg-card);
-    padding: 24px;
+    padding: 16px 18px;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     transition: var(--transition-normal);
@@ -842,8 +863,8 @@ img {
 .contact-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 32px;
+    gap: 14px;
+    margin-bottom: 28px;
 }
 
 .contact-card {
@@ -851,9 +872,9 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    padding: 24px 20px;
-    min-height: 120px;
+    gap: 10px;
+    padding: 18px 16px;
+    min-height: 100px;
     background: var(--bg-card);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
@@ -1163,6 +1184,13 @@ img {
 .publication-item:nth-child(4) { transition-delay: 0.4s; }
 .publication-item:nth-child(5) { transition-delay: 0.5s; }
 .publication-item:nth-child(6) { transition-delay: 0.6s; }
+.publication-item:nth-child(7) { transition-delay: 0.1s; }
+.publication-item:nth-child(8) { transition-delay: 0.15s; }
+.publication-item:nth-child(9) { transition-delay: 0.2s; }
+.publication-item:nth-child(10) { transition-delay: 0.25s; }
+.publication-item:nth-child(11) { transition-delay: 0.3s; }
+.publication-item:nth-child(12) { transition-delay: 0.35s; }
+.publication-item:nth-child(13) { transition-delay: 0.4s; }
 
 .area-card:nth-child(1) { transition-delay: 0.1s; }
 .area-card:nth-child(2) { transition-delay: 0.2s; }
@@ -1187,7 +1215,7 @@ img {
 .thesis-card {
     background: var(--bg-card);
     border-radius: var(--border-radius-lg);
-    padding: 40px;
+    padding: 28px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
     border-top: 4px solid var(--primary-color);
@@ -1253,7 +1281,7 @@ img {
 
 @media (max-width: 768px) {
     .thesis-card {
-        padding: 24px;
+        padding: 20px;
     }
 
     .thesis-card h3 {

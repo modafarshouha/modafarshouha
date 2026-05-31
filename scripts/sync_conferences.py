@@ -9,7 +9,7 @@ HTML_PATH = REPO_ROOT / "index.html"
 CSV_PATH = REPO_ROOT / "assets" / "documents" / "conferences.csv"
 
 CONF_BLOCK_RE = re.compile(
-    r'<div class="publication-item conference-item">(.*?)</div>\s*</div>',
+    r'<div class="publication-item conference-item[^"]*">(.*?)</div>\s*</div>',
     re.DOTALL,
 )
 YEAR_RE = re.compile(r'<span class="conf-year">(.*?)</span>')

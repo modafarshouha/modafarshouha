@@ -500,6 +500,14 @@
                     </div>
                 </div>
             </div>
+            <div class="conferences-cta">
+                <button id="conf-toggle" class="btn btn-secondary" onclick="toggleConferences()" style="display:none">
+                    <i class="fas fa-chevron-down"></i> Show all conferences
+                </button>
+            </div>
+            <noscript>
+                <style>.conf-hidden { max-height: none !important; overflow: visible !important; opacity: 1 !important; margin-bottom: 10px !important; padding: 16px 18px !important; border: 1px solid var(--border-color) !important; transform: none !important; }</style>
+            </noscript>
         </div>
     </section>
 
@@ -791,6 +799,40 @@
         document.querySelectorAll('.timeline-item, .publication-item, .area-card, .contact-card').forEach(el => {
             observer.observe(el);
         });
+
+        const CONF_VISIBLE_COUNT = 6;
+        (function initConferences() {
+            const all = document.querySelectorAll('.conference-item');
+            const btn = document.getElementById('conf-toggle');
+            if (all.length <= CONF_VISIBLE_COUNT) return;
+
+            all.forEach((el, i) => {
+                if (i >= CONF_VISIBLE_COUNT) el.classList.add('conf-hidden');
+            });
+
+            btn.style.display = '';
+            btn.innerHTML = '<i class="fas fa-chevron-down"></i> Show all ' + all.length + ' conferences';
+        })();
+
+        function toggleConferences() {
+            const items = document.querySelectorAll('.conf-hidden');
+            const btn = document.getElementById('conf-toggle');
+            const total = document.querySelectorAll('.conference-item').length;
+            const expanded = items[0].classList.contains('conf-visible');
+
+            items.forEach(el => {
+                if (expanded) {
+                    el.classList.remove('conf-visible', 'animate-in');
+                } else {
+                    el.classList.add('conf-visible');
+                    requestAnimationFrame(() => el.classList.add('animate-in'));
+                }
+            });
+
+            btn.innerHTML = expanded
+                ? '<i class="fas fa-chevron-down"></i> Show all ' + total + ' conferences'
+                : '<i class="fas fa-chevron-up"></i> Show less';
+        }
     </script>
 </body>
 </html>
