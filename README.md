@@ -1,6 +1,6 @@
-# Personal website
+# Personal Portfolio
 
-Academic portfolio for Modafar Al-Shouha.
+Personal academic portfolio.
 
 **Live site:** https://modafarshouha.github.io/modafarshouha/
 
