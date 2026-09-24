@@ -31,7 +31,7 @@
                 <li><a href="https://modafarshouha.github.io/sloth-blog" target="_blank">Blog</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#conferences">Conferences</a></li>
+                <li><a href="#conferences">Conferences &amp; talks</a></li>
                 <li><a href="#thesis">Thesis</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#membership">Membership</a></li>
@@ -348,12 +348,12 @@
         </div>
     </section>
 
-    <!-- Conferences Section -->
+    <!-- Conferences & talks Section -->
     <section id="conferences" class="section conferences">
         <div class="container">
             <h2 class="section-title">
                 <span class="title-icon"><i class="fas fa-users"></i></span>
-                Conferences
+                Conferences &amp; talks
             </h2>
             <div class="publications-list conferences-list">
                 <div class="publication-item conference-item">
@@ -365,6 +365,17 @@
                         </div>
                         <h4><a href="https://www.iceccme.com/" target="_blank" rel="noopener noreferrer">6th International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME)</a></h4>
                         <p class="pub-venue">Nusa Dua · Bali, Indonesia · 15–17 October 2026</p>
+                    </div>
+                </div>
+                <div class="publication-item conference-item">
+                    <div class="pub-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="pub-content">
+                        <div class="conference-meta">
+                            <span class="conf-year">2026</span>
+                            <span class="conf-role">Speaker / guest</span>
+                        </div>
+                        <h4>Practitioner Lecture Series: RAG Systems — From NLP &amp; Transformers to Industrial Applications</h4>
+                        <p class="pub-venue">Vocational School, Universitas Sebelas Maret · Online · 23 September 2026</p>
                     </div>
                 </div>
                 <div class="publication-item conference-item">
@@ -502,7 +513,7 @@
             </div>
             <div class="conferences-cta">
                 <button id="conf-toggle" class="btn btn-secondary" onclick="toggleConferences()" style="display:none">
-                    <i class="fas fa-chevron-down"></i> Show all conferences
+                    <i class="fas fa-chevron-down"></i> Show all events
                 </button>
             </div>
             <noscript>
@@ -811,7 +822,7 @@
             });
 
             btn.style.display = '';
-            btn.innerHTML = '<i class="fas fa-chevron-down"></i> Show all ' + all.length + ' conferences';
+            btn.innerHTML = '<i class="fas fa-chevron-down"></i> Show all ' + all.length + ' events';
         })();
 
         function toggleConferences() {
@@ -830,7 +841,7 @@
             });
 
             btn.innerHTML = expanded
-                ? '<i class="fas fa-chevron-down"></i> Show all ' + total + ' conferences'
+                ? '<i class="fas fa-chevron-down"></i> Show all ' + total + ' events'
                 : '<i class="fas fa-chevron-up"></i> Show less';
         }
     </script>
